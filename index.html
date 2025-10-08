@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anusuya Mayaraj - HR & Social Work Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.2);
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.3s;
+        }
+
+        .contact-info a:hover {
+            transform: translateY(-3px);
+        }
+
+        nav {
+            background: #2d3748;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.1);
+            color: #667eea;
+        }
+
+        section {
+            padding: 60px 40px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        section:nth-child(even) {
+            background: #f7fafc;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #764ba2;
+        }
+
+        .objective-text {
+            font-size: 1.1em;
+            color: #4a5568;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 15px 20px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:nth-child(even) .skill-item {
+            background: #edf2f7;
+        }
+
+        .skill-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .experience-item, .education-item {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 5px solid #764ba2;
+        }
+
+        section:nth-child(even) .experience-item,
+        section:nth-child(even) .education-item {
+            background: #edf2f7;
+        }
+
+        .experience-item h3, .education-item h3 {
+            color: #2d3748;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .experience-meta, .education-meta {
+            color: #718096;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+
+        .research-list, .activity-list {
+            list-style: none;
+        }
+
+        .research-list li, .activity-list li {
+            padding: 15px;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        section:nth-child(even) .research-list li,
+        section:nth-child(even) .activity-list li {
+            background: #edf2f7;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .software-item {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        section:nth-child(even) .software-item {
+            background: #edf2f7;
+        }
+
+        .software-item:hover {
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="profile.jpg" alt="Anusuya Mayaraj" class="profile-img" onerror="this.style.display='none'">
+            <h1>ANUSUYA MAYARAJ</h1>
+            <p class="tagline">HR Professional | Social Worker | Counselling Psychology Student</p>
+            <div class="contact-info">
+                <a href="tel:+919080045651">📱 +91 9080045651</a>
+                <a href="mailto:anushiyahr95@gmail.com">✉️ anushiyahr95@gmail.com</a>
+                <span style="color: white;">📍 Tiruchirappalli, Tamil Nadu</span>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="objective-text">
+                Passionate HR and Social Work professional with over 5 years of combined experience in human resources management and community development. Currently pursuing M.Sc. in Counselling Psychology to enhance my ability to support individuals and organizations effectively. I bring strong expertise in talent management, employee engagement, and community outreach, with a proven track record of implementing successful HR initiatives and social welfare programs. My goal is to leverage my diverse skill set to create positive impact in organizational and social contexts, working efficiently in challenging global environments.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Professional Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">🤝 Team Collaboration & Leadership</div>
+                <div class="skill-item">👥 Manpower Planning & Recruitment</div>
+                <div class="skill-item">🎯 Talent Management</div>
+                <div class="skill-item">💰 Compensation & Benefits</div>
+                <div class="skill-item">🎪 Employee Engagement</div>
+                <div class="skill-item">📊 Performance Management</div>
+                <div class="skill-item">📚 Learning & Development</div>
+                <div class="skill-item">⚖️ Employee Relations & Grievance</div>
+                <div class="skill-item">📝 Report Writing & Documentation</div>
+                <div class="skill-item">🌱 Community Development</div>
+                <div class="skill-item">⏰ Time Management</div>
+                <div class="skill-item">🔄 Process Optimization</div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Senior Counsellor</h3>
+                <div class="experience-meta">
+                    District Social Welfare Office, Trichy | September 2019 - October 2023 (4 Years)
+                </div>
+                <p>Led counselling initiatives and community welfare programs, providing guidance and support to individuals and families. Coordinated with multi-disciplinary teams to implement social welfare schemes and conducted awareness programs across the district.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>HR and Admin</h3>
+                <div class="experience-meta">
+                    Strides Shasun India, Pondicherry | May 2017 - May 2018 (1 Year)
+                </div>
+                <p>Managed end-to-end HR operations including recruitment, employee engagement, performance management, and administrative functions. Implemented training programs and maintained employee relations in a pharmaceutical manufacturing environment.</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Academic Qualifications</h2>
+            
+            <div class="education-item">
+                <h3>M.Sc. Counselling Psychology (Pursuing)</h3>
+                <div class="education-meta">St. Joseph's College, Tiruchirappalli | 2024 - 2026</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Master of Social Work (Human Resources)</h3>
+                <div class="education-meta">Holy Cross College, Trichy | 2015 - 2017</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Bachelor of Business Administration</h3>
+                <div class="education-meta">Holy Cross College, Trichy | 2012 - 2014</div>
+            </div>
+
+            <h2 style="margin-top: 40px;">Computer Skills</h2>
+            <div class="software-grid">
+                <div class="software-item">💼 Microsoft Office</div>
+                <div class="software-item">🎨 Photoshop 7</div>
+                <div class="software-item">📊 SPSS 16</div>
+                <div class="software-item">💰 Tally</div>
+                <div class="software-item">🎬 Documentary Screen</div>
+                <div class="software-item">💻 DCA Certified</div>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research & Projects</h2>
+            
+            <h3 style="color: #2d3748; margin-bottom: 20px;">Major Research</h3>
+            <ul class="research-list">
+                <li><strong>Impact of WhatsApp Use on Success in Education Process</strong> - Analyzed the correlation between social media usage and academic performance among students.</li>
+                <li><strong>Effectiveness of Training and Development at Omega Healthcare Center, Trichy</strong> - Evaluated training programs and their impact on employee performance and organizational outcomes.</li>
+                <li><strong>Emotional Maturity of Adolescent College Students with Special Reference to Screen Addiction, Chennai</strong> - Studied the relationship between screen time and emotional development in young adults.</li>
+            </ul>
+
+            <h3 style="color: #2d3748; margin: 30px 0 20px;">Field Work Experience</h3>
+            <ul class="activity-list">
+                <li>ITC Grand Chola, Chennai - Hospitality sector HR practices</li>
+                <li>SRM Medical College Hospital and Research Center, Chennai - Healthcare administration</li>
+                <li>Holy Cross Blossom School, Trichy - Educational institution management</li>
+                <li>Grama Vidiyal Microfinance Pvt Ltd, Trichy - Financial services sector</li>
+                <li>Strides Shasun, Pondicherry - Block placement in pharmaceutical industry</li>
+            </ul>
+
+            <h3 style="color: #2d3748; margin: 30px 0 20px;">Community Engagement</h3>
+            <ul class="activity-list">
+                <li><strong>District Camp at Kariyamanickam, Trichy</strong> - Organized medical camps and personal hygiene awareness programs for rural communities (June 2015)</li>
+                <li><strong>Tribal Visit at Kodaikanal</strong> - Week-long immersion program to understand tribal communities and their unique challenges (February 2016)</li>
+                <li><strong>Street Play Projects</strong> - Conducted awareness campaigns on eve-teasing and economic inequality through group performances</li>
+                <li><strong>Red Cross Member</strong> - Active member of Junior and Youth Red Cross (2005-2015)</li>
+                <li><strong>Department Secretary</strong> - Social Work Department, Holy Cross College (2015-2017)</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p style="font-size: 1.1em; color: #4a5568; margin-bottom: 20px;">
+                I'm always open to discussing new opportunities, collaborations, or just having a conversation about HR, social work, or counselling psychology.
+            </p>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 30px;">
+                <a href="tel:+919080045651" style="background: #667eea; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">📱 Call Me</a>
+                <a href="mailto:anushiyahr95@gmail.com" style="background: #764ba2; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">✉️ Email Me</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Anusuya Mayaraj. All rights reserved.</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Empowering organizations and communities through HR excellence and social work.</p>
+        </footer>
+    </div>
+</body>
+</html>
