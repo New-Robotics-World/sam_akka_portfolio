@@ -78,7 +78,7 @@
 
         nav {
             background: #2d3748;
-            padding: 15px;
+            padding: 10px 15px;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -100,11 +100,29 @@
             transition: color 0.3s;
             padding: 5px 15px;
             border-radius: 5px;
+            display: inline-block;
         }
 
         nav a:hover {
             background: rgba(255,255,255,0.1);
             color: #667eea;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
         }
 
         section {
@@ -254,9 +272,30 @@
                 gap: 10px;
             }
 
-            nav ul {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                padding: 10px 15px;
+            }
+
+            .nav-links {
+                display: none;
                 flex-direction: column;
-                gap: 10px;
+                gap: 5px;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            nav a {
+                padding: 10px 15px;
+                text-align: center;
+                width: 100%;
             }
         }
     </style>
@@ -275,13 +314,14 @@
         </header>
 
         <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+                <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+                <li><a href="#education" onclick="closeMenu()">Education</a></li>
+                <li><a href="#research" onclick="closeMenu()">Research</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
             </ul>
         </nav>
 
@@ -404,5 +444,17 @@
             <p style="margin-top: 10px; opacity: 0.8;">Empowering organizations and communities through HR excellence and social work.</p>
         </footer>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.remove('active');
+        }
+    </script>
 </body>
 </html>
